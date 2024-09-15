@@ -1,71 +1,168 @@
+/* Reset default margin and padding */
 * {
-    margin: 0;
-    padding: 0;
-  }
-  .left{
-    font-size: 25px;
-  }
-  body {
-    background-color: rgb(16, 16, 45);
-    color: white;
-    font-family: "Poppins", sans-serif;
-  }
-  nav{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: rgb(11, 11, 60);
-    height: 60px;
-  }
-  nav ul{
-    display: flex;
-    justify-content: center;
-  }
-  nav ul li{
-    list-style: none;
-    margin: 0 25px;
-  }
-  nav ul li a{
-    text-decoration:  none;
-    color: white;
-  }
-  nav ul li a:hover{
-    color: rgb(130, 130, 234);
-    font-size: 17px;
-    }
-  .firstsection{
-    display: flex;
-    justify-content: space-around;
-    }
-  .purple{
-
-    color: rgb(140, 72, 203);
-  }
-  .firstsection > div{
-    width: 30%;
-    }
-  .leftsection
-  {
-    font-size: 36px;
-    width: 50px;
-    margin-top: 175px;
-    align-items: center;
-  }
-  .rightsection img{
-    margin-top: 100px;
-    width: 300px;
-  }
-  #element{
-    color: rgb(140, 72, 203);
-  }
-main hr{
-    border: 0;
-    background: rgb(107, 107, 201);
-    height: 1.2px;
-    margin: 90px 84px;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
-.secondsection{
-    max-width: 80vw;
-    margin: auto;
-    font-size: small;
+
+/* Basic body styling */
+body {
+  background-color: rgb(11, 11, 105);
+  color: white;
+  font-family: "Poppins", sans-serif;
+}
+.left{
+  font-size: 30px;
+}
+/* Navigation bar styling */
+nav {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(13, 13, 126);
+  height: 60px;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+}
+
+nav ul li {
+  margin: 0 25px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  transition: color 0.3s, font-size 0.3s; /* Smooth transitions */
+}
+
+nav ul li a:hover {
+  color: rgb(130, 130, 234);
+  font-size: 17px;
+}
+
+/* CV button styling */
+.CV {
+  display: inline-flex; /* Use inline-flex for buttons */
+  color: white;
+  text-decoration: none;
+  padding: 1px 20px;
+  border: 1px solid white;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transitions */
+}
+
+.CV:hover {
+  color: rgb(130, 130, 234);
+  font-size: 17px;
+  opacity: 0.8;
+  border-color: rgb(130, 130, 234);
+}
+
+/* Layout for sections */
+.firstsection {
+  display: flex;
+  justify-content: space-around;
+}
+
+.firstsection > div {
+  width: 30%;
+}
+
+/* Left section styling with animation */
+.leftsection {
+  font-size: 36px;
+  width: 10%; /* Adjust as needed */
+  margin-top: 175px;
+  margin-right: 100px;
+  /* Initial position off-screen to the left */
+  transform: translateX(-50%);
+  opacity: 0; /* Start with invisible text */
+  animation: slide-in-left-to-right 1.5s ease-out forwards; /* Apply animation */
+}
+
+/* Keyframes for sliding from left to right */
+@keyframes slide-in-left-to-right {
+  from {
+    transform: translateX(-50%); /* Start from off-screen to the left */
+    opacity: 0; /* Start with invisible text */
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* End with visible text */
+  }
+}
+
+.rightsection img {
+  margin-top: 100px;
+  width: 300px;
+  transform: translateX(100%);
+  opacity: 0; /* Start with invisible text */
+  animation: slide-in-right-to-left 1.5s ease-out forwards;
+}
+
+@keyframes slide-in-right-to-left {
+  from {
+    transform: translateX(100%); /* Start from off-screen to the right */
+    opacity: 0; /* Start with invisible text */
+  }
+  to {
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* End with visible text */
+  }
+}
+
+.hello {
+  font-size: 20px;
+  line-height: 15px; /* Adjust line-height to be consistent */
+  color: skyblue;
+}
+
+/* Color class */
+.purple {
+  color: white;
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.blue {
+  color: white;
+  font-size: 80px;
+  line-height: 80px;
+}
+
+.passionate {
+  font-size: 20px;
+  line-height: 110px;
+}
+
+/* Container for #element and .passionate */
+.text-container {
+  display: flex;
+  align-items: center; /* Vertically align items */
+  gap: 15px;  /* Optional: space between the items */
+}
+
+/* Element styling */
+#element {
+  color: skyblue;
+  font-size: 40px; 
+}
+
+/* Horizontal rule styling */
+main hr {
+  border: 0;
+  background: rgb(107, 107, 201);
+  height: 1.2px;
+  margin: 90px 84px;
+}
+
+/* Second section styling */
+.secondsection {
+  max-width: 80vw;
+  margin: auto;
+  font-size: small;
 }
