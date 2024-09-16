@@ -51,15 +51,15 @@ nav ul li a:hover {
   text-decoration: none;
   padding: 1px 20px;
   border: 1px solid white;
-  border-radius: 5px;
+  border-radius: 15px;
+  opacity: 0.8;
   transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transitions */
 }
 
 .CV:hover {
-  color: rgb(130, 130, 234);
+  color: rgb(7, 7, 7);
   font-size: 17px;
-  opacity: 0.8;
-  border-color: rgb(130, 130, 234);
+  opacity: 1;
 }
 
 /* Layout for sections */
@@ -158,12 +158,102 @@ main hr {
   border: 0;
   background: rgb(107, 107, 201);
   height: 1.2px;
-  margin-top: 60px;
+  margin-top: 70px;
 }
 
 /* Second section styling */
 .secondsection {
-  max-width: 80vw;
-  margin: auto;
-  font-size: small;
+  display: flex; /* Flexbox for layout */
+  justify-content: space-between; /* Distribute boxes evenly */
+  gap: 20px; /* Space between the boxes */
+  max-width: 80vw; /* Adjust as necessary */
+  margin: 70px auto;/* Center the section and add spacing */
+}
+
+.box {
+  background-color: rgb(34, 34, 165); /* Box background */
+  color: white;
+  padding: 20px;
+  flex: 1; /* Make the boxes flexible */
+  text-align: center;
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
+}
+
+.box h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  text-decoration: underline;
+}
+
+.box p {
+  font-size: 16px;
+  line-height: 1.5;
+  text-align: left;
+}
+
+/* Hover effect for each box */
+.box:hover {
+  transform: translateY(-10px); /* Move box up on hover */
+  background-color: rgb(49, 49, 164); /* Change background color on hover */
+}
+/* About Me Section */
+.aboutme {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: rgb(10, 45, 105);
+  margin-top: 30px;
+}
+
+.leftabout img {
+  width: 400px;
+  height: 350px;
+  margin-top: 78px;
+  border-radius: 10px;
+}
+
+.rightabout {
+  flex: 1;
+  margin-left: 30px;
+}
+
+.rightabout h2 {
+  font-size: 36px;
+  margin-bottom: 20px;
+  text-decoration: underline;
+  color: skyblue;
+}
+
+.rightabout p {
+  font-size: 18px;
+  color: #ebd8d8;
+  line-height: 1.6;
+}
+.rightabout ul {
+  list-style-type: disc;
+  margin-left: 20px;
+  color: aliceblue;
+}
+
+.rightabout li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: aliceblue;
+}
+.rightabout ul {
+  list-style-type: disc;
+  margin-left: 20px;
+}
+
+.rightabout li {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: rgb(137, 163, 187);
+}
+
+.rightabout h2 {
+  font-size: 36px;
+  margin-bottom: 20px;;
 }
