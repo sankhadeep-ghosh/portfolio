@@ -257,3 +257,86 @@ main hr {
   font-size: 36px;
   margin-bottom: 20px;;
 }
+/* Container for the scrolling text */
+/* Wrapper to manage overflow */
+/* Container for the scrolling effect */
+.scrolling-wrapper {
+  width: 100%;
+  height: 105.6px; /* Match the height of the text */
+  overflow: hidden;
+  position: relative; /* Ensure the container positions its child elements correctly */
+}
+
+/* Scrolling content styling and animation */
+.scrolling-content {
+  display: flex;
+  flex-direction: row; /* Ensure text flows in a row */
+  white-space: nowrap; /* Prevents text from wrapping */
+  position: absolute; /* Positions it absolutely within the wrapper */
+  width: 200%; /* Width should be twice the wrapper width to accommodate both text elements */
+  height: 100%;
+}
+
+/* Text styling and animation */
+.abcd {
+  display: flex;
+  align-items: center; /* Center text vertically */
+  color: blueviolet;
+  letter-spacing: 1px;
+  box-sizing: border-box;
+  font-family: "jost-medium-font";
+  font-size: 96px; /* Large font size */
+  font-weight: 400; /* Normal font weight */
+  opacity: 0.5; /* Semi-transparent text */
+  text-transform: uppercase;
+  animation: scrolling-content 6s linear infinite; /* Adjust duration for scrolling speed */
+}
+
+/* Keyframes for the scrolling animation */
+@keyframes scrolling-content {
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  100% {
+    transform: translateX(-50%); /* End position: move left by half of its width */
+  }
+}
+
+/* General Styles for Services Section */
+.services {
+  padding: 50px;
+  background-color: #201c9a;
+  text-align: center;
+}
+
+.service-box {
+  display: inline-block;
+  width: 22%;
+  height: 200px;
+  margin: 10px;
+  padding: 20px;
+  background-color: #c3c8d7;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+.service-box h1 {
+  margin-top: 200px;
+  color: #333;
+}
+  .service-box h3 {
+  margin-top: 0;
+  color: #333;
+}
+
+.service-box p {
+  color: #666;
+}
+
+/* Animation Trigger */
+.service-box.visible {
+  opacity: 1;
+  transform: translateY(0);
+}

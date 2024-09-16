@@ -7,3 +7,26 @@ document.addEventListener('DOMContentLoaded', function() {
     loop: true
   });
 });
+document.addEventListener('DOMContentLoaded', function() {
+  const serviceBoxes = document.querySelectorAll('.service-box');
+
+  function handleScroll() {
+    const triggerPoint = window.innerHeight / 1.2;
+
+    serviceBoxes.forEach(box => {
+      const boxTop = box.getBoundingClientRect().top;
+
+      if (boxTop < triggerPoint) {
+        box.classList.add('visible');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', handleScroll);
+  handleScroll(); // Trigger on initial load
+});
+/*document.addEventListener('DOMContentLoaded', () => {
+  const scrollingContent = document.querySelector('.scrolling-content');
+  const text = scrollingContent.textContent;
+  scrollingContent.setAttribute('data-text', text);
+});*/
