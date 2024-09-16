@@ -76,7 +76,7 @@ nav ul li a:hover {
 .leftsection {
   font-size: 36px;
   width: 10%; /* Adjust as needed */
-  margin-top: 175px;
+  margin-top: 150px;
   margin-right: 100px;
   /* Initial position off-screen to the left */
   transform: translateX(-50%);
@@ -99,6 +99,7 @@ nav ul li a:hover {
 .rightsection img {
   margin-top: 100px;
   width: 300px;
+  margin-left: 50px;
   transform: translateX(100%);
   opacity: 0; /* Start with invisible text */
   animation: slide-in-right-to-left 1.5s ease-out forwards;
@@ -117,6 +118,7 @@ nav ul li a:hover {
 
 .hello {
   font-size: 20px;
+  font-weight: 700;
   line-height: 15px; /* Adjust line-height to be consistent */
   color: skyblue;
 }
@@ -133,31 +135,30 @@ nav ul li a:hover {
   font-size: 80px;
   line-height: 80px;
 }
-
-.passionate {
-  font-size: 20px;
-  line-height: 110px;
-}
-
-/* Container for #element and .passionate */
+/* Container for text */
 .text-container {
   display: flex;
-  align-items: center; /* Vertically align items */
-  gap: 15px;  /* Optional: space between the items */
+  align-items: baseline; /* Align the text along the baseline */
+  gap: 10px;
 }
 
-/* Element styling */
+/* Style for "A passionate" */
+.passionate {
+  font-size: 20px;
+  color: white;
+}
+
+/* Style for the dynamic text */
 #element {
+  font-size: 30px;
   color: skyblue;
-  font-size: 40px; 
 }
-
 /* Horizontal rule styling */
 main hr {
   border: 0;
   background: rgb(107, 107, 201);
   height: 1.2px;
-  margin: 90px 84px;
+  margin-top: 60px;
 }
 
 /* Second section styling */
