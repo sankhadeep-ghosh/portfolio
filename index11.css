@@ -257,50 +257,38 @@ main hr {
   font-size: 36px;
   margin-bottom: 20px;;
 }
-/* Container for the scrolling text */
-/* Wrapper to manage overflow */
-/* Container for the scrolling effect */
-.scrolling-wrapper {
-  width: 100%;
-  height: 105.6px; /* Match the height of the text */
+/* scroll bar */
+.scrolling-section {
   overflow: hidden;
-  position: relative; /* Ensure the container positions its child elements correctly */
+  white-space: nowrap;
+  position: relative;
+  width: 100%;
+  height: 100px; /* Adjust as needed */
 }
 
-/* Scrolling content styling and animation */
-.scrolling-content {
-  display: flex;
-  flex-direction: row; /* Ensure text flows in a row */
-  white-space: nowrap; /* Prevents text from wrapping */
-  position: absolute; /* Positions it absolutely within the wrapper */
-  width: 200%; /* Width should be twice the wrapper width to accommodate both text elements */
-  height: 100%;
-}
-
-/* Text styling and animation */
-.abcd {
-  display: flex;
-  align-items: center; /* Center text vertically */
+.scrolling-text {
+  margin-top: 0%;
+  font-size: 95px;
+  position: absolute;
+  animation: scroll 15s linear infinite; /* Adjust duration for speed */
   color: blueviolet;
-  letter-spacing: 1px;
-  box-sizing: border-box;
   font-family: "jost-medium-font";
   font-size: 96px; /* Large font size */
   font-weight: 400; /* Normal font weight */
   opacity: 0.5; /* Semi-transparent text */
   text-transform: uppercase;
-  animation: scrolling-content 6s linear infinite; /* Adjust duration for scrolling speed */
+
 }
 
-/* Keyframes for the scrolling animation */
-@keyframes scrolling-content {
+@keyframes scroll {
   0% {
-    transform: translateX(0); /* Start position */
+    transform: translateX(100%);
   }
   100% {
-    transform: translateX(-50%); /* End position: move left by half of its width */
+    transform: translateX(-100%);
   }
 }
+
 
 /* General Styles for Services Section */
 .services {
@@ -321,6 +309,9 @@ main hr {
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1.2s ease, transform 1.2s ease;
+}
+.abt{
+  font-size: 100px;
 }
 .service-box h1 {
   margin-top: 200px;
