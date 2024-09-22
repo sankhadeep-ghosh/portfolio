@@ -48,7 +48,6 @@ nav ul li a:hover {
 .CV {
   display: inline-flex; /* Use inline-flex for buttons */
   color: white;
-  text-decoration: none;
   padding: 1px 20px;
   border: 1px solid white;
   border-radius: 15px;
@@ -298,32 +297,37 @@ main hr {
 }
 
 .service-box {
-  display: inline-block;
+  display: inline-flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center the content */
+  align-items: center; /* Center align items */
   width: 22%;
   height: 200px;
   margin: 10px;
   padding: 20px;
-  background-color: #c3c8d7;
+  background-color: rgb(34, 38, 112);
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   opacity: 0;
   transform: translateY(20px);
   transition: opacity 1.2s ease, transform 1.2s ease;
+  text-align: center; /* Center text within the box */
 }
-.abt{
-  font-size: 100px;
-}
-.service-box h1 {
-  margin-top: 200px;
-  color: #333;
-}
-  .service-box h3 {
-  margin-top: 0;
-  color: #333;
+
+.service-box h3 {
+  margin: 0; /* Remove margin for tight spacing */
+  font-size: 22px; /* Adjust font size */
+  color: #f6f4f4;
+  text-decoration:underline;
+  line-height: 1.2; /* Improve line height */
 }
 
 .service-box p {
-  color: #666;
+  color: #e7dfdf;
+  margin: 10px 0 0; /* Add margin above for spacing */
+  font-size: 14px; /* Adjust font size */
+  line-height: 1.5; /* Improve readability */
+  text-align: center; /* Center align text */
 }
 
 /* Animation Trigger */
