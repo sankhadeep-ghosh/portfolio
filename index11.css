@@ -120,7 +120,6 @@ nav ul li a:hover {
   align-items: flex-start; /* Align items to the start */
   position: relative;
 }
-
 .social-media-icons {
   box-sizing: border-box;
   font-family: "jost-medium-font";
@@ -130,7 +129,6 @@ nav ul li a:hover {
   padding: 0; /* Reset padding */
   padding-left: 70px; /* Additional space on the left */
   text-align: right; /* Align text to the right */
-
 }
 .list{
   text-decoration: none; /* Remove underline */
@@ -140,7 +138,6 @@ nav ul li a:hover {
   flex-direction: column;
   padding-bottom: 0px;
 }
-
 .social-media-icons img {
   width: 40px; /* Adjust icon size */
   height: auto; /* Maintain aspect ratio */
