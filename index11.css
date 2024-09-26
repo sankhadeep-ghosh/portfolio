@@ -1,36 +1,45 @@
-/* Reset default margin and padding */
+/* General Reset */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-/* Basic body styling */
 body {
-  background-color: rgb(11, 11, 105);
-  color: white;
-  font-family: "Poppins", sans-serif;
-}
-.left{
-  font-size: 30px;
-}
-/* Navigation bar styling */
-nav {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  background-color: rgb(13, 13, 126);
-  height: 60px;
+  font-family: 'Arial', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  background-color: #08109a;
 }
 
-nav ul {
+/* Header & Navigation */
+header {
+  background-color: #0f1060; /* Dark blue for header */
+  color: white;
+  padding: 10px 0;
+}
+
+nav {
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+nav .left {
+  font-size: 24px;
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+nav .right ul {
+  display: flex;
   list-style: none;
 }
 
-nav ul li {
-  margin: 0 25px;
+nav .right ul li {
+  margin: 0 15px;
 }
 
 nav ul li a {
@@ -55,29 +64,23 @@ nav ul li a:hover {
   transition: background-color 0.3s, border-color 0.3s, color 0.3s; /* Smooth transitions */
 }
 
-.CV:hover {
-  color: rgb(7, 7, 7);
-  font-size: 17px;
-  opacity: 1;
+nav .right ul .CV a:hover {
+  color: blueviolet;
+  border: blueviolet;
 }
 
-/* Layout for sections */
+/* Home Section */
 .firstsection {
   display: flex;
-  justify-content: space-around;
-  align-items: flex-start;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background: #152ba5; /* Medium blue */
 }
-
-.firstsection > div {
-  width: 30%;
-}
-
-/* Left section styling with animation */
 .leftsection {
-  font-size: 36px;
   width: 10%; /* Adjust as needed */
-  margin-top: 150px;
-  margin-right: 100px;
+  display: inline;
+  margin-top: 60px;
   /* Initial position off-screen to the left */
   transform: translateX(-50%);
   opacity: 0; /* Start with invisible text */
@@ -95,54 +98,6 @@ nav ul li a:hover {
     opacity: 1; /* End with visible text */
   }
 }
-
-.rightsection img {
-  margin-top: 100px;
-  width: 300px;
-  margin-left: 20px;
-  transform: translateX(100%);
-  opacity: 0; /* Start with invisible text */
-  animation: slide-in-right-to-left 1.5s ease-out forwards;
-}
-
-@keyframes slide-in-right-to-left {
-  from {
-    transform: translateX(100%); /* Start from off-screen to the right */
-    opacity: 0; /* Start with invisible text */
-  }
-  to {
-    transform: translateX(0); /* End at the original position */
-    opacity: 1; /* End with visible text */
-  }
-}
-.rightsection {
-  display: flex;
-  align-items: flex-start; /* Align items to the start */
-  position: relative;
-}
-.social-media-icons {
-  box-sizing: border-box;
-  font-family: "jost-medium-font";
-  line-height: 0; /* Reset line height */
-  margin: 0; /* Reset margins */
-  margin-left: 30px; /* Space to the left */
-  padding: 0; /* Reset padding */
-  padding-left: 70px; /* Additional space on the left */
-  text-align: right; /* Align text to the right */
-}
-.list{
-  text-decoration: none; /* Remove underline */
-  display: flex; /* Ensure it takes the full height */
-  align-items: center; /* Center icons vertically */
-  position: relative; /* To position the pseudo-element */
-  flex-direction: column;
-  padding-bottom: 0px;
-}
-.social-media-icons img {
-  width: 40px; /* Adjust icon size */
-  height: auto; /* Maintain aspect ratio */
-  margin-bottom: 1px; /* Reduced space between icons */
-}
 .hello {
   font-size: 20px;
   font-weight: 700;
@@ -155,6 +110,7 @@ nav ul li a:hover {
   color: white;
   font-size: 80px;
   line-height: 80px;
+  gap: 20px;
 }
 
 .blue {
@@ -162,6 +118,7 @@ nav ul li a:hover {
   font-size: 80px;
   line-height: 80px;
 }
+
 /* Container for text */
 .text-container {
   display: flex;
@@ -173,116 +130,73 @@ nav ul li a:hover {
 .passionate {
   font-size: 20px;
   color: white;
+  display: inline; /* Ensures the text stays in line */
 }
 
 /* Style for the dynamic text */
 #element {
-  font-size: 30px;
+  font-size: 40px;
   color: skyblue;
-}
-/* Horizontal rule styling */
-main hr {
-  border: 0;
-  background: rgb(107, 107, 201);
-  height: 1.2px;
-  margin-top: 70px;
+  display: inline; /* Ensures the text stays in line */
+  margin-left: 10px; /* Adds space between the two texts */
 }
 
-/* Second section styling */
-.secondsection {
-  display: flex; /* Flexbox for layout */
-  justify-content: space-between; /* Distribute boxes evenly */
-  gap: 20px; /* Space between the boxes */
-  max-width: 80vw; /* Adjust as necessary */
-  margin: 70px auto;/* Center the section and add spacing */
-}
-
-.box {
-  background-color: rgb(34, 34, 165); /* Box background */
-  color: white;
-  padding: 20px;
-  flex: 1; /* Make the boxes flexible */
-  text-align: center;
-  border-radius: 8px; /* Rounded corners */
-  transition: transform 0.3s, background-color 0.3s; /* Smooth transition */
-}
-
-.box h2 {
-  font-size: 24px;
+.firstsection .rightsection img {
+  max-width: 400px;
   margin-bottom: 10px;
-  text-decoration: underline;
 }
 
-.box p {
-  font-size: 16px;
-  line-height: 1.5;
-  text-align: left;
-}
-
-/* Hover effect for each box */
-.box:hover {
-  transform: translateY(-10px); /* Move box up on hover */
-  background-color: rgb(49, 49, 164); /* Change background color on hover */
-}
-/* About Me Section */
-.aboutme {
+.social-media-icons ul {
+  list-style: none;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
+}
+
+.social-media-icons ul li {
+  margin-right: 20px;
+  padding: 0px; /* Adds space around each icon */
+  border-radius: 10px; /* Rounded corners for the box */
+  transition: background-color 0.3s ease; /* Smooth background transition on hover */
+}
+
+.social-media-icons ul li:hover {
+  background-color: rgba(255, 255, 255, 0.1); /* Darker on hover */
+}
+
+.social-media-icons ul li img {
+  width: 45px; /* Increased size for icons */
+  transition: transform 0.3s ease;
+}
+
+.social-media-icons ul li img:hover {
+  transform: scale(1.1); /* Slightly scale up on hover */
+}
+
+/* Second Section */
+.secondsection {
+  display: flex;
+  justify-content: space-around;
   padding: 50px;
-  background-color: rgb(10, 45, 105);
-  margin-top: 30px;
+  background: #7986cb; /* Light purple */
 }
 
-.leftabout img {
-  width: 400px;
-  height: 350px;
-  margin-top: 78px;
+.secondsection .box {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #ddd;
   border-radius: 10px;
+  background-color: #fdfdfd;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.rightabout {
-  flex: 1;
-  margin-left: 30px;
+.secondsection h2 {
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
-.rightabout h2 {
-  font-size: 36px;
-  margin-bottom: 20px;
-  text-decoration: underline;
-  color: skyblue;
-}
-
-.rightabout p {
-  font-size: 18px;
-  color: #ebd8d8;
-  line-height: 1.6;
-}
-.rightabout ul {
-  list-style-type: disc;
-  margin-left: 20px;
-  color: aliceblue;
-}
-
-.rightabout li {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: aliceblue;
-}
-.rightabout ul {
-  list-style-type: disc;
-  margin-left: 20px;
-}
-
-.rightabout li {
-  margin-bottom: 10px;
-  font-size: 18px;
-  color: rgb(137, 163, 187);
-}
-
-.rightabout h2 {
-  font-size: 36px;
-  margin-bottom: 20px;;
+.secondsection p {
+  font-size: 16px;
+  color: #555;
 }
 /* scroll bar */
 .scrolling-section {
@@ -290,21 +204,21 @@ main hr {
   white-space: nowrap;
   position: relative;
   width: 100%;
-  height: 100px; /* Adjust as needed */
+  height: 135px; /* Adjust as needed */
 }
 
 .scrolling-text {
   margin-top: 0%;
-  font-size: 95px;
+  margin-bottom: 200px;
   position: absolute;
-  animation: scroll 15s linear infinite; /* Adjust duration for speed */
-  color: blueviolet;
+  animation: scroll 10s linear infinite; /* Adjust duration for speed */
+  color: rgb(236, 233, 242);
   font-family: "jost-medium-font";
-  font-size: 96px; /* Large font size */
+  font-size: 90px; /* Large font size */
   font-weight: 400; /* Normal font weight */
   opacity: 0.5; /* Semi-transparent text */
   text-transform: uppercase;
-
+  align-items: center;
 }
 
 @keyframes scroll {
@@ -317,49 +231,91 @@ main hr {
 }
 
 
-/* General Styles for Services Section */
-.services {
+
+/* About Section */
+.aboutme {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 0px;
   padding: 50px;
-  background-color: #201c9a;
-  text-align: center;
+  background-color: #9c27b0; /* Purple */
+}
+
+.aboutme .leftabout img {
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.aboutme .rightabout {
+  max-width: 600px;
+  padding: 0 20px;
+}
+
+.aboutme h2 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+.aboutme ul {
+  list-style: none;
+}
+
+.aboutme ul li {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.aboutme ul li strong {
+  color: #6a0dad;
+}
+
+/* Services Section */
+.services {
+  display: flex;
+  justify-content: space-around;
+  padding: 50px;
+  background-color: #673ab7; /* Darker purple */
 }
 
 .service-box {
-  display: inline-flex;
-  flex-direction: column; /* Stack elements vertically */
-  justify-content: center; /* Center the content */
-  align-items: center; /* Center align items */
-  width: 22%;
-  height: 200px;
-  margin: 10px;
+  width: 250px;
+  text-align: center;
   padding: 20px;
-  background-color: rgb(34, 38, 112);
-  border-radius: 8px;
+  background-color: white;
+  border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 1.2s ease, transform 1.2s ease;
-  text-align: center; /* Center text within the box */
 }
 
 .service-box h3 {
-  margin: 0; /* Remove margin for tight spacing */
-  font-size: 22px; /* Adjust font size */
-  color: #f6f4f4;
-  text-decoration:underline;
-  line-height: 1.2; /* Improve line height */
+  font-size: 22px;
+  color: #333;
+  margin-bottom: 15px;
 }
 
 .service-box p {
-  color: #e7dfdf;
-  margin: 10px 0 0; /* Add margin above for spacing */
-  font-size: 14px; /* Adjust font size */
-  line-height: 1.5; /* Improve readability */
-  text-align: center; /* Center align text */
+  font-size: 16px;
+  color: #666;
 }
 
-/* Animation Trigger */
-.service-box.visible {
-  opacity: 1;
-  transform: translateY(0);
+/* Responsiveness */
+@media screen and (max-width: 768px) {
+  .firstsection {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .secondsection, .services {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .secondsection .box, .service-box {
+    margin-bottom: 20px;
+  }
+
+  .aboutme {
+    flex-direction: column;
+  }
 }
