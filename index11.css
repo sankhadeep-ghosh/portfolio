@@ -16,7 +16,7 @@ body {
 header {
   background-color: #0f1060; /* Dark blue for header */
   color: white;
-  padding: 10px 0;
+  padding: 20px 0;
 }
 
 nav {
@@ -77,27 +77,29 @@ nav .right ul .CV a:hover {
   padding: 50px;
   background: #152ba5; /* Medium blue */
 }
+
 .leftsection {
-  width: 10%; /* Adjust as needed */
-  display: inline;
+  
   margin-top: 60px;
-  /* Initial position off-screen to the left */
-  transform: translateX(-50%);
+  margin-right: 30px;
+  transform: translateX(-50%); /* Initial position off-screen to the left */
   opacity: 0; /* Start with invisible text */
   animation: slide-in-left-to-right 1.5s ease-out forwards; /* Apply animation */
+  font-family: Arial, sans-serif;
 }
 
 /* Keyframes for sliding from left to right */
 @keyframes slide-in-left-to-right {
   from {
-    transform: translateX(-50%); /* Start from off-screen to the left */
-    opacity: 0; /* Start with invisible text */
+      transform: translateX(-50%); /* Start from off-screen to the left */
+      opacity: 0; /* Start with invisible text */
   }
   to {
-    transform: translateX(0); /* End at the original position */
-    opacity: 1; /* End with visible text */
+      transform: translateX(0); /* End at the original position */
+      opacity: 1; /* End with visible text */
   }
 }
+
 .hello {
   font-size: 20px;
   font-weight: 700;
@@ -110,7 +112,6 @@ nav .right ul .CV a:hover {
   color: white;
   font-size: 80px;
   line-height: 80px;
-  gap: 20px;
 }
 
 .blue {
@@ -121,24 +122,22 @@ nav .right ul .CV a:hover {
 
 /* Container for text */
 .text-container {
-  display: flex;
-  align-items: baseline; /* Align the text along the baseline */
-  gap: 10px;
+  display: block; /* Use inline-flex to align items on the same line */
+  align-items: center; /* Align the text along the baseline */
+  margin-top: 10px;
 }
 
 /* Style for "A passionate" */
 .passionate {
   font-size: 20px;
   color: white;
-  display: inline; /* Ensures the text stays in line */
 }
 
 /* Style for the dynamic text */
 #element {
   font-size: 40px;
   color: skyblue;
-  display: inline; /* Ensures the text stays in line */
-  margin-left: 10px; /* Adds space between the two texts */
+  margin-left: 10px; /* Adjust spacing between "A passionate" and dynamic text */
 }
 
 .firstsection .rightsection img {
@@ -152,8 +151,8 @@ nav .right ul .CV a:hover {
 }
 
 .social-media-icons ul li {
-  margin-right: 20px;
-  padding: 0px; /* Adds space around each icon */
+  margin-right: 10px; /* Reduced margin for closer spacing */
+  padding: 0; /* Adds space around each icon */
   border-radius: 10px; /* Rounded corners for the box */
   transition: background-color 0.3s ease; /* Smooth background transition on hover */
 }
@@ -163,12 +162,35 @@ nav .right ul .CV a:hover {
 }
 
 .social-media-icons ul li img {
-  width: 45px; /* Increased size for icons */
-  transition: transform 0.3s ease;
+  width: 50px; /* Increased size for icons */
+  transition: transform 0.6s ease;
 }
 
-.social-media-icons ul li img:hover {
-  transform: scale(1.1); /* Slightly scale up on hover */
+.social-media-icons .list {
+  display: flex;
+  justify-content: space-around; /* Adjusts spacing between icons */
+}
+
+.social-media-icons li {
+  perspective: 1000px; /* Gives depth for 3D effect */
+  display: inline-block;
+  border: 2px solid transparent; /* Border styling */
+  border-radius: 10px; /* Rounded corners (optional) */
+  padding: 5px; /* Space between icon and border */
+}
+
+.social-media-icons img {
+  transition: transform 1s; /* Smooth transition for the transform */
+  transform-style: preserve-3d; /* Ensure children are in 3D space */
+  display: block;
+}
+
+.social-media-icons li:hover img {
+  transform: rotateY(360deg); /* Rotate the icon on hover */
+}
+
+.social-media-icons li:hover {
+  border-color: #3b5998; /* Example color for Facebook; change as needed */
 }
 
 /* Second Section */
