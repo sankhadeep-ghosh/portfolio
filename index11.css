@@ -17,6 +17,9 @@ header {
   background-color: #0f1060; /* Dark blue for header */
   color: white;
   padding: 20px 0;
+  position: sticky; /* Make header sticky */
+  top: 0; /* Stick to the top */
+  z-index: 1000; /* Ensure it stays above other content */
 }
 
 nav {
@@ -79,24 +82,21 @@ nav .right ul .CV a:hover {
 }
 
 .leftsection {
-  
   margin-top: 60px;
   margin-right: 30px;
   transform: translateX(-50%); /* Initial position off-screen to the left */
   opacity: 0; /* Start with invisible text */
   animation: slide-in-left-to-right 1.5s ease-out forwards; /* Apply animation */
-  font-family: Arial, sans-serif;
 }
 
-/* Keyframes for sliding from left to right */
 @keyframes slide-in-left-to-right {
   from {
-      transform: translateX(-50%); /* Start from off-screen to the left */
-      opacity: 0; /* Start with invisible text */
+    transform: translateX(-50%); /* Start from off-screen to the left */
+    opacity: 0; /* Start with invisible text */
   }
   to {
-      transform: translateX(0); /* End at the original position */
-      opacity: 1; /* End with visible text */
+    transform: translateX(0); /* End at the original position */
+    opacity: 1; /* End with visible text */
   }
 }
 
@@ -107,33 +107,23 @@ nav .right ul .CV a:hover {
   color: skyblue;
 }
 
-/* Color class */
-.purple {
+.purple, .blue {
   color: white;
   font-size: 80px;
   line-height: 80px;
 }
 
-.blue {
-  color: white;
-  font-size: 80px;
-  line-height: 80px;
-}
-
-/* Container for text */
 .text-container {
   display: block; /* Use inline-flex to align items on the same line */
   align-items: center; /* Align the text along the baseline */
   margin-top: 10px;
 }
 
-/* Style for "A passionate" */
 .passionate {
   font-size: 20px;
   color: white;
 }
 
-/* Style for the dynamic text */
 #element {
   font-size: 40px;
   color: skyblue;
@@ -151,24 +141,14 @@ nav .right ul .CV a:hover {
 }
 
 .social-media-icons ul li {
-  margin-right: 10px; /* Reduced margin for closer spacing */
-  padding: 0; /* Adds space around each icon */
+  margin-right: 5px; /* Reduced margin for closer spacing */
   border-radius: 10px; /* Rounded corners for the box */
   transition: background-color 0.3s ease; /* Smooth background transition on hover */
-}
-
-.social-media-icons ul li:hover {
-  background-color: rgba(255, 255, 255, 0.1); /* Darker on hover */
 }
 
 .social-media-icons ul li img {
   width: 50px; /* Increased size for icons */
   transition: transform 0.6s ease;
-}
-
-.social-media-icons .list {
-  display: flex;
-  justify-content: space-around; /* Adjusts spacing between icons */
 }
 
 .social-media-icons li {
@@ -189,38 +169,7 @@ nav .right ul .CV a:hover {
   transform: rotateY(360deg); /* Rotate the icon on hover */
 }
 
-.social-media-icons li:hover {
-  border-color: #3b5998; /* Example color for Facebook; change as needed */
-}
-
-/* Second Section */
-.secondsection {
-  display: flex;
-  justify-content: space-around;
-  padding: 50px;
-  background: #7986cb; /* Light purple */
-}
-
-.secondsection .box {
-  width: 250px;
-  padding: 20px;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  background-color: #fdfdfd;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.secondsection h2 {
-  font-size: 24px;
-  color: #333;
-  margin-bottom: 15px;
-}
-
-.secondsection p {
-  font-size: 16px;
-  color: #555;
-}
-/* scroll bar */
+/* Scrolling Section */
 .scrolling-section {
   overflow: hidden;
   white-space: nowrap;
@@ -230,17 +179,13 @@ nav .right ul .CV a:hover {
 }
 
 .scrolling-text {
-  margin-top: 0%;
-  margin-bottom: 200px;
   position: absolute;
   animation: scroll 10s linear infinite; /* Adjust duration for speed */
-  color: rgb(236, 233, 242);
+  color: rgb(255, 255, 255);
   font-family: "jost-medium-font";
   font-size: 90px; /* Large font size */
-  font-weight: 400; /* Normal font weight */
   opacity: 0.5; /* Semi-transparent text */
   text-transform: uppercase;
-  align-items: center;
 }
 
 @keyframes scroll {
@@ -252,92 +197,111 @@ nav .right ul .CV a:hover {
   }
 }
 
-
-
 /* About Section */
 .aboutme {
   display: flex;
   justify-content: space-between;
-  padding-top: 0px;
+  align-items: center;
   padding: 50px;
-  background-color: #9c27b0; /* Purple */
+  color: white;
+  background-color: #2b189b; /* Purple */
 }
 
 .aboutme .leftabout img {
   max-width: 100%;
   border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
 }
 
 .aboutme .rightabout {
   max-width: 600px;
-  padding: 0 20px;
+  padding: 20px; /* Add padding for better layout */
+  background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Box shadow for depth */
 }
 
 .aboutme h2 {
   font-size: 32px;
-  color: #333;
+  color: #756f6f;
   margin-bottom: 20px;
 }
 
 .aboutme ul {
   list-style: none;
+  padding: 0;
 }
 
 .aboutme ul li {
   margin-bottom: 10px;
   font-size: 18px;
+  transition: color 0.3s;
+}
+
+.aboutme ul li:hover {
+  color: #8c6fa0;
 }
 
 .aboutme ul li strong {
-  color: #6a0dad;
+  color: #9c8ba9;
 }
 
 /* Services Section */
-.services {
+.secondsection {
   display: flex;
   justify-content: space-around;
   padding: 50px;
-  background-color: #673ab7; /* Darker purple */
+  background-color: #152ba5;
 }
 
-.service-box {
+.secondsection .box {
   width: 250px;
-  text-align: center;
   padding: 20px;
-  background-color: white;
+  border: 1px solid #ddd;
   border-radius: 10px;
+  background-color: #2d0d95;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-.service-box h3 {
-  font-size: 22px;
-  color: #333;
+.secondsection h2 {
+  font-size: 24px;
+  color: #8dc1dd;
   margin-bottom: 15px;
 }
 
-.service-box p {
+.secondsection p {
   font-size: 16px;
-  color: #666;
+  color: #f3eeee;
 }
 
-/* Responsiveness */
-@media screen and (max-width: 768px) {
+/* Responsive Design */
+@media (max-width: 900px) {
+  .aboutme {
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center items */
+  }
+
+  .aboutme .leftabout {
+    margin-bottom: 20px; /* Add bottom margin for spacing */
+  }
+
+  .aboutme .rightabout {
+    max-width: 100%; /* Allow full width */
+    padding: 50px; /* Add padding */
+  }
+
   .firstsection {
     flex-direction: column;
     text-align: center;
   }
 
-  .secondsection, .services {
+  .secondsection {
     flex-direction: column;
     align-items: center;
   }
 
-  .secondsection .box, .service-box {
+  .secondsection .box {
     margin-bottom: 20px;
   }
-
-  .aboutme {
-    flex-direction: column;
-  }
 }
+
