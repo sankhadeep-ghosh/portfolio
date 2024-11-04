@@ -208,13 +208,13 @@ nav .right ul .CV a:hover {
 }
 
 .aboutme .leftabout img {
-  max-width: 100%;
-  border-radius: 10px;
+  width: 500px;
+  border-radius: 0px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2); /* Slightly stronger shadow */
 }
 
 .aboutme .rightabout {
-  max-width: 600px;
+  max-width: 900px;
   padding: 20px; /* Add padding for better layout */
   background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
   border-radius: 10px; /* Rounded corners */
@@ -222,6 +222,7 @@ nav .right ul .CV a:hover {
 }
 
 .aboutme h2 {
+  margin-top: 20px;
   font-size: 32px;
   color: #756f6f;
   margin-bottom: 20px;
