@@ -12,7 +12,7 @@ Welcome to the repository for my **Portfolio Website**! This website showcases m
 
 The portfolio is built using the following technologies:
 
-- **Frontend**: HTML, CSS, JavaScript (with modern frameworks like React if applicable)
+- **Frontend**: HTML, CSS, JavaScript 
 - **Styling**: Tailwind CSS  / Custom CSS
 - **Hosting**: GitHub Pages
 
