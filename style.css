@@ -5,6 +5,7 @@
   box-sizing: border-box;
 }
 
+
 body {
   font-family: 'Arial', sans-serif;
   color: #333;
@@ -276,7 +277,7 @@ nav .right ul .CV a:hover {
 } 
 
 /* Responsive Design */
-@media (max-width: 900px) {
+@media (max-width: 480px) {
   .aboutme {
     flex-direction: column; /* Stack items vertically */
     align-items: center; /* Center items */
