@@ -416,6 +416,7 @@ nav .right ul .CV a:hover {
   margin-bottom: 20px;
   color: #e8e8e8; /* Softer white */
   font-weight: 600;
+  border-radius: 2px;
 }
 
 .contact-form {
@@ -502,4 +503,209 @@ nav .right ul .CV a:hover {
 
 .tabs .active {
   background-color: #5278d6; /* Lighter active tab color */
+}
+#submit-button {
+  background: linear-gradient(135deg, #6a11cb 0%, #2575fc 100%);
+  color: white;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+#submit-button:hover {
+  background: linear-gradient(135deg, #2575fc 0%, #6a11cb 100%);
+  transform: scale(1.05);
+}
+body {
+  color: #E0ECFF;
+  background-color: #0A0F2C;
+}
+
+header {
+  background-color: #11205c; /* Lighter blueish background */
+  color: #E0ECFF;
+  padding: 20px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul li a {
+  color: #E0ECFF;
+}
+
+nav ul li a:hover {
+  color: #00CFC1;
+}
+
+.CV {
+  color: #E0ECFF;
+  border: 1px solid #E0ECFF;
+}
+
+nav .right ul .CV a:hover {
+  color: #3A86FF;
+  border: 1px solid #3A86FF;
+}
+
+.firstsection {
+  background: #0F1847;
+}
+
+.hello {
+  color: #00CFC1;
+}
+
+.purple, .blue {
+  color: #E0ECFF;
+}
+
+.passionate {
+  color: #B0C5E0;
+}
+
+#element {
+  color: #3A86FF;
+}
+
+.scrolling-text {
+  color: #3A86FF;
+}
+
+.aboutme {
+  background-color: #121944;
+  color: #E0ECFF;
+}
+
+.aboutme .rightabout {
+  background-color: rgba(58, 85, 138, 0.1);
+}
+
+.aboutme h2 {
+  color: #00CFC1;
+}
+
+.aboutme ul li:hover {
+  color: #3A86FF;
+}
+
+.aboutme ul li strong {
+  color: #00CFC1;
+}
+
+.secondsection {
+  background-color: #0F1847;
+}
+
+.secondsection .box {
+  background-color: #1E2560;
+  border: 1px solid #2D366E;
+}
+
+.secondsection h2 {
+  color: #00CFC1;
+}
+
+.secondsection p {
+  color: #D0E4FF;
+}
+
+.projects {
+  background-color: #0F1C45;
+  color: #E0ECFF;
+}
+
+.project-item {
+  background-color: #1A234E;
+  border: 2px solid #263164;
+}
+
+.project-info h3 {
+  color: #E0ECFF;
+}
+
+.project-info p {
+  color: #B0C5E0;
+}
+
+.project-info a {
+  background-color: #3A86FF;
+  color: #ffffff;
+}
+
+.project-info a:hover {
+  background-color: #00CFC1;
+}
+
+.project-item:nth-child(odd) {
+  background-color: #1A234E;
+}
+
+.project-item:nth-child(even) {
+  background-color: #1E2560;
+}
+
+.contact {
+  background-color: #16204C;
+  color: #E0ECFF;
+}
+
+.contact h2 {
+  color: #00CFC1;
+}
+
+.contact-form {
+  background-color: #1E2560;
+}
+
+.contact-form input,
+.contact-form textarea {
+  border: 1px solid #3A86FF;
+  background-color: #27305D;
+  color: #E0ECFF;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  border-color: #00CFC1;
+}
+
+.contact-form button,
+#submit-button {
+  background: linear-gradient(135deg, #00CFC1 0%, #3A86FF 100%);
+  color: #0A0F2C;
+}
+
+.contact-form button:hover,
+#submit-button:hover {
+  background: linear-gradient(135deg, #3A86FF 0%, #00CFC1 100%);
+}
+
+.copyright {
+  background-color: #121944;
+  color: #E0ECFF;
+}
+
+.copyright p {
+  color: #B0C5E0;
+}
+
+.tabs {
+  background-color: #1E2560;
+}
+
+.tabs a {
+  color: #E0ECFF;
+}
+
+.tabs a:hover {
+  background-color: #3A86FF;
+}
+
+.tabs .active {
+  background-color: #00CFC1;
 }
