@@ -249,6 +249,61 @@ nav .right ul .CV a:hover {
 }
 
 /* Services Section */
+/* Wrapper to center heading + boxes */
+.services-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* My Services heading style */
+.services-heading {
+  font-size: 40px;
+  color: #00CFC1;
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.services-heading::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #3A86FF;
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
+/* Align boxes in a row */
+.services-boxes {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+/* Existing box styles (keep as-is, already styled nicely) */
+.secondsection .box {
+  width: 250px;
+  padding: 20px;
+  border: 1px solid #2D366E;
+  border-radius: 10px;
+  background-color: #1E2560;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.secondsection .box h2 {
+  font-size: 24px;
+  color: #00CFC1;
+  margin-bottom: 15px;
+}
+
+.secondsection .box p {
+  font-size: 16px;
+  color: #D0E4FF;
+}
+
 .secondsection {
   display: flex;
   justify-content: space-around;
@@ -307,34 +362,45 @@ nav .right ul .CV a:hover {
   }
 }
 .projects {
-  padding: 40px;
-  background-color: #192b94; /* Blue background matching services section */
-  color: white; /* White text for contrast */
+  padding: 50px 20px;
+  background-color: #0F1C45; /* Match services section */
   text-align: center;
 }
-.projects h2{
-  font-size: 32px;
-  margin-bottom: 20px;
-  margin-top: 0;
-  padding-top: 0;
-  padding-bottom: 0;
+
+.projects h2 {
+  font-size: 40px;
+  color: #00CFC1; /* Same as "My Services" */
+  font-weight: bold;
+  margin-bottom: 40px;
+  position: relative;
 }
+
+.projects h2::after {
+  content: '';
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #3A86FF; /* Blue underline */
+  margin: 10px auto 0;
+  border-radius: 2px;
+}
+
 .project-item {
   display: flex;
-  flex-direction: column; /* Stack the image and text vertically */
+  flex-direction: column;
   align-items: center;
   margin-bottom: 30px;
-  background-color: #191782; /* Slightly darker blue for the card background */
-  border: 2px solid #1b0e7b; /* Darker blue border for the cards */
+  background-color: #1A234E;
+  border: 2px solid #263164;
   border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1); /* Enhanced shadow */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .project-item:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Enhanced hover effect */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
 }
 
 .project-image {
@@ -342,7 +408,6 @@ nav .right ul .CV a:hover {
   height: 180px;
   margin-bottom: 20px;
   overflow: hidden;
-  position: relative;
   border-radius: 8px;
 }
 
@@ -354,24 +419,25 @@ nav .right ul .CV a:hover {
 }
 
 .project-image:hover img {
-  transform: scale(1.1); /* Zoom effect */
+  transform: scale(1.1);
 }
 
 .project-info {
   max-width: 400px;
   text-align: center;
+  padding-top: 15px;
 }
 
 .project-info h3 {
   font-size: 1.6rem;
-  color: #f1f1f1; /* Lighter font color for better readability */
+  color: #E0ECFF;
   margin-bottom: 10px;
   font-weight: 600;
 }
 
 .project-info p {
   font-size: 1rem;
-  color: #e1e1e1; /* Lighter text for description */
+  color: #B0C5E0;
   line-height: 1.6;
   margin-bottom: 20px;
 }
@@ -379,7 +445,7 @@ nav .right ul .CV a:hover {
 .project-info a {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #2c19a5; /* Blue background for the link */
+  background-color: #3A86FF;
   color: #fff;
   text-decoration: none;
   border-radius: 30px;
@@ -388,21 +454,10 @@ nav .right ul .CV a:hover {
 }
 
 .project-info a:hover {
-  background-color: #3423b0; /* Hover background */
-  transform: scale(1.05); /* Slightly scale the link */
+  background-color: #00CFC1;
+  transform: scale(1.05);
 }
 
-.project-item:nth-child(odd) {
-  background-color: #1b438f; /* Alternate background for odd projects */
-}
-
-.project-item:nth-child(even) {
-  background-color: #22478b; /* Alternate background for even projects */
-}
-
-.project-item .project-info {
-  padding-top: 15px;
-}
 /* Contact Me Section */
 .contact {
   padding: 50px 20px;
